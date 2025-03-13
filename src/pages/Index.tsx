@@ -1,3 +1,4 @@
+import GlobalCleaningEffect from "@components/GlobalCleaningEffect";
 import Header from "@components/Header";
 import { AnimatePresence, motion } from "framer-motion";
 const Index = () => {
@@ -8,9 +9,8 @@ const Index = () => {
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         transition={{ duration: 0.5 }}
-        className="min-h-screen overflow-x-hidden dark:bg-slate-900 dark:text-white"
       >
-        <Header />
+        <Header /> <GlobalCleaningEffect />
       </motion.div>
     </AnimatePresence>
   );
