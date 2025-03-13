@@ -16,7 +16,14 @@ export default function Navbar() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
+  const navItems = {
+    home: "Главная",
+    services: "Услуги",
+    products: "Продукты",
+    about: "О нас",
+    testimonials: "Отзывы",
+    contact: "Контакты",
+  };
   return (
     <header
       className={cn(
@@ -37,20 +44,13 @@ export default function Navbar() {
         </Link>
 
         <nav className="hidden md:flex items-center space-x-8">
-          {[
-            "Home",
-            "Services",
-            "Products",
-            "About",
-            "Testimonials",
-            "Contact",
-          ].map((item) => (
+          {Object.entries(navItems).map(([key, value]) => (
             <a
-              key={item}
-              href={`#${item.toLowerCase()}`}
+              key={key}
+              href={`#${key}`}
               className="relative text-foreground/80 hover:text-foreground dark:text-white/80 dark:hover:text-white transition-colors duration-300 font-medium after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:-bottom-1 after:left-0 after:bg-blue-clean after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left"
             >
-              {item}
+              {value}
             </a>
           ))}
         </nav>
@@ -61,7 +61,7 @@ export default function Navbar() {
             href="#contact"
             className="btn-primary dark:bg-blue-clean/90 dark:text-white dark:hover:bg-blue-clean"
           >
-            Get a Quote
+            Узнать цену
           </a>
         </div>
 
@@ -84,21 +84,13 @@ export default function Navbar() {
       {isMobileMenuOpen && (
         <div className="absolute top-full left-0 right-0 bg-white/95 backdrop-blur-md shadow-lg dark:bg-slate-900/95 dark:shadow-slate-800/20 md:hidden">
           <div className="px-4 py-6 space-y-4">
-            {[
-              "Home",
-              "Services",
-              "Products",
-              "About",
-              "Testimonials",
-              "Contact",
-            ].map((item) => (
+            {Object.entries(navItems).map(([key, value]) => (
               <a
-                key={item}
-                href={`#${item.toLowerCase()}`}
-                className="block py-2 text-foreground/80 hover:text-foreground dark:text-white/80 dark:hover:text-white transition-colors duration-300 font-medium"
-                onClick={() => setIsMobileMenuOpen(false)}
+                key={key}
+                href={`#${key}`}
+                className="relative text-foreground/80 hover:text-foreground dark:text-white/80 dark:hover:text-white transition-colors duration-300 font-medium after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:-bottom-1 after:left-0 after:bg-blue-clean after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left"
               >
-                {item}
+                {value}
               </a>
             ))}
             <a
@@ -106,7 +98,7 @@ export default function Navbar() {
               className="btn-primary w-full flex justify-center mt-4 dark:bg-blue-clean/90 dark:text-white dark:hover:bg-blue-clean"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              Get a Quote
+              Узнать цену
             </a>
           </div>
         </div>
