@@ -1,3 +1,5 @@
+import ContactForm from "@components/ContactForm";
+import Footer from "@components/Footer";
 import GlobalCleaningEffect from "@components/GlobalCleaningEffect";
 import Header from "@components/Header";
 import Hero from "@components/Hero";
@@ -22,6 +24,8 @@ const Index = () => {
         <ProductsSection />
         <ParallaxSection />
         <Testimonials />
+        <ContactForm />
+        <Footer />
       </motion.div>
     </AnimatePresence>
   );
