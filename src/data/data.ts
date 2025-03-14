@@ -7,6 +7,14 @@ import {
   Droplet,
 } from "lucide-react";
 
+interface Testimonial {
+  id: number;
+  name: string;
+  position: string;
+  image?: string;
+  content: string;
+  rating: number;
+}
 export const services = [
   {
     icon: Home,
@@ -119,7 +127,14 @@ export const products = [
     category: "Кухня",
   },
 ];
-
+export const navItems = {
+  home: "Главная",
+  services: "Услуги",
+  products: "Продукты",
+  about: "О нас",
+  testimonials: "Отзывы",
+  contact: "Контакты",
+};
 export const categories = [
   "Все",
   "Универсальные",
@@ -127,4 +142,50 @@ export const categories = [
   "Полы",
   "Кухня",
   "Инструменты",
+];
+export const benefits = [
+  "Обученные и проверенные клинеры",
+  "Экологически чистые чистящие средства",
+  "Гибкий график уборки",
+  "Гарантия удовлетворенности",
+  "Индивидуальные планы уборки",
+  "Стабильно высокое качество",
+];
+export const testimonials: Testimonial[] = [
+  {
+    id: 1,
+    name: "Ayzirek Bekmuratova",
+    position: "Üy iesi",
+    image: "https://randomuser.me/api/portraits/women/12.jpg",
+    content:
+      "QaraqalpaqCleaning üyimdi tazalap, onı jaña sonday körkem etip qoydı. Olardıń nazikligi men jwmısqa berilgendigi meni taǵı da qwanısdı qıldı.",
+    rating: 5,
+  },
+  {
+    id: 2,
+    name: "Ernazar Allamuratov",
+    position: "Ofis menedjeri",
+    image: "https://randomuser.me/api/portraits/men/32.jpg",
+    content:
+      "Bizdiń ofisimiz bul komanda keldi-ketken soñ şınında da jaqımsız tazalığa ie boldı. Olar turaqtı, senimdi hám joqarı sapalı qızmet körsetedi.",
+    rating: 5,
+  },
+  {
+    id: 3,
+    name: "Gulzira Serikbayeva",
+    position: "Páter turğını",
+    image: "https://randomuser.me/api/portraits/women/44.jpg",
+    content:
+      "Meniń páterimdi olar tüp-tamırınan jańalaǵanday boldı. Óte jaqsı teren tazalaw qızmeti, bärine usınım etemin!",
+    rating: 4,
+  },
+  {
+    id: 4,
+    name: "Azamat Baqtıbayev",
+    position: "Restoran iesi",
+    image: "https://randomuser.me/api/portraits/men/46.jpg",
+    content:
+      "Restoran biznesinde tazalıq éń maqızlısı. QaraqalpaqCleaning komandası bizdiń kúndelikli tazalıq boyınsha senimdi seriktesimizge aynaldı.",
+    rating: 5,
+  },
 ];
