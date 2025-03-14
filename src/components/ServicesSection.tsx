@@ -7,7 +7,6 @@ export default function ServicesSection() {
   return (
     <section id="services" className="py-24 relative overflow-hidden">
       <div className="absolute inset-0  z-0"></div>
-
       <motion.div
         className="absolute top-1/4 right-0 w-64 h-64 bg-mint-clean-light rounded-full filter blur-3xl opacity-20"
         animate={{
