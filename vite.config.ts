@@ -12,6 +12,7 @@ export default defineConfig({
       "@pages": path.resolve(__dirname, "./src/pages"),
       "@hooks": path.resolve(__dirname, "./src/hooks"),
       "@motionVariants": path.resolve(__dirname, "./src/motionVariants"),
+      "@data": path.resolve(__dirname, "./src/data"),
     },
   },
 });

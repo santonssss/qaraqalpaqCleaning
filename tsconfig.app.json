@@ -12,6 +12,7 @@
       "@pages/*": ["src/pages/*"],
       "@hooks/*": ["src/hooks/*"],
       "@motionVariants/*": ["src/motionVariants/*"],
+      "@data/*": ["src/data/*"],
       "@lib/*": ["src/lib/*"]
     },
     /* Bundler mode */
