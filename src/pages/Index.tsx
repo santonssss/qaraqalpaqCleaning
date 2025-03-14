@@ -1,8 +1,10 @@
 import GlobalCleaningEffect from "@components/GlobalCleaningEffect";
 import Header from "@components/Header";
 import Hero from "@components/Hero";
+import ParallaxSection from "@components/ParallaxSection";
 import ProductsSection from "@components/ProductsSection";
 import ServicesSection from "@components/ServicesSection";
+import Testimonials from "@components/Testimonials";
 import { AnimatePresence, motion } from "framer-motion";
 const Index = () => {
   return (
@@ -18,6 +20,8 @@ const Index = () => {
         <Hero />
         <ServicesSection />
         <ProductsSection />
+        <ParallaxSection />
+        <Testimonials />
       </motion.div>
     </AnimatePresence>
   );
