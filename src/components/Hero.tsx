@@ -1,4 +1,3 @@
-import { useEffect, useRef } from "react";
 import { ArrowDown } from "lucide-react";
 import { cn } from "@lib/utils";
 import { motion, AnimatePresence } from "framer-motion";
@@ -6,44 +5,9 @@ import AnimatedElement from "./AnimatedElement";
 import { contentVariants, particleVariants } from "@motionVariants/variants";
 
 export default function Hero() {
-  const heroRef = useRef<HTMLDivElement>(null);
-  const cleaningElementRef = useRef<HTMLDivElement>(null);
-  const headingRef = useRef<HTMLHeadingElement>(null);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (!heroRef.current || !cleaningElementRef.current) return;
-
-      const scrollY = window.scrollY;
-      const heroHeight = heroRef.current.offsetHeight;
-      const scrollPercentage = Math.min(scrollY / (heroHeight * 0.6), 1);
-
-      cleaningElementRef.current.style.opacity = (
-        1 - scrollPercentage
-      ).toString();
-
-      const translateY = scrollY * 0.5;
-      heroRef.current.style.transform = `translateY(${translateY}px)`;
-
-      if (headingRef.current) {
-        const rotateX = scrollY * 0.02;
-        headingRef.current.style.transform = `perspective(1000px) rotateX(${Math.min(
-          rotateX,
-          5
-        )}deg)`;
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
   const createCleanElements = () => {
     const elements = [];
-    for (let i = 0; i < 10; i++) {
+    for (let i = 0; i < 30; i++) {
       elements.push(
         <div
           key={i}
@@ -68,22 +32,14 @@ export default function Hero() {
 
   return (
     <div
-      className=" md:py-24 relative min-h-screen flex items-center overflow-hidden pt-16"
+      className=" md:py-24 relative min-h-screen  flex items-center pt-16"
       id="home"
     >
       <div className="absolute inset-0  dark:bg-slate-900 dark:bg-opacity-95 opacity-10 z-0"></div>
 
-      <div
-        ref={cleaningElementRef}
-        className="absolute inset-0 z-0 overflow-hidden"
-      >
-        {createCleanElements()}
-      </div>
+      <div className="absolute inset-0 z-0">{createCleanElements()}</div>
 
-      <div
-        ref={heroRef}
-        className="relative z-10 w-full section-container flex flex-col items-center justify-center text-center"
-      >
+      <div className="relative z-10 w-full section-container flex flex-col items-center justify-center text-center">
         <AnimatePresence>
           <motion.div
             initial="hidden"
@@ -99,7 +55,6 @@ export default function Hero() {
 
             <AnimatedElement variant="scale" delay={0.1} duration={0.8}>
               <h1
-                ref={headingRef}
                 className="text-4xl md:text-6xl lg:text-display font-bold tracking-tight text-foreground dark:text-white transition-transform duration-300 mt-4"
                 style={{ transformStyle: "preserve-3d" }}
               >
@@ -155,7 +110,7 @@ export default function Hero() {
             >
               <a
                 href="#services"
-                className="text-foreground/50 hover:text-foreground dark:text-white/50 dark:hover:text-white transition-colors flex flex-col items-center gap-2"
+                className="text-foreground/50 hover:text-foreground dark:text-white/50 dark:hover:text-white transition-colors flex flex-col items-center "
               >
                 <span className="text-sm font-medium">
                   Прокрутите страницу, чтобы узнать
