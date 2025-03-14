@@ -23,8 +23,7 @@ export default function GlobalCleaningEffect() {
 
   const createCleanElements = () => {
     const elements = [];
-    const numElements = window.innerWidth < 768 ? 10 : 20;
-    for (let i = 0; i < numElements; i++) {
+    for (let i = 0; i < 35; i++) {
       elements.push(
         <div
           key={i}

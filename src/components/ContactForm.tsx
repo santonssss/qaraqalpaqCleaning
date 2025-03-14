@@ -216,11 +216,11 @@ export default function ContactForm() {
               </h3>
 
               <div className="space-y-6">
-                <div className="flex items-start gap-4">
+                <div className="flex flex-col  items-center  md:flex-row gap-4 ">
                   <div className="w-10 h-10 rounded-full bg-blue-clean/10 flex items-center justify-center text-blue-clean flex-shrink-0">
                     <Phone className="w-5 h-5" />
                   </div>
-                  <div>
+                  <div className="flex w-[80%] flex-col justify-center items-center md:ml-4 ">
                     <h4 className="font-medium">Телефон</h4>
                     <p className="text-muted-foreground">+998 90 593 26 05</p>
                     <p className="text-sm text-blue-clean mt-1">
@@ -228,12 +228,11 @@ export default function ContactForm() {
                     </p>
                   </div>
                 </div>
-
-                <div className="flex items-start gap-4">
+                <div className="flex flex-col items-center  md:flex-row  gap-4">
                   <div className="w-10 h-10 rounded-full bg-blue-clean/10 flex items-center justify-center text-blue-clean flex-shrink-0">
                     <Mail className="w-5 h-5" />
                   </div>
-                  <div>
+                  <div className="flex w-[80%] flex-col justify-center items-center md:ml-4 ">
                     <h4 className="font-medium">Email</h4>
                     <p className="text-muted-foreground">
                       sarvarkalmuratvo370@gmail.com
@@ -244,11 +243,11 @@ export default function ContactForm() {
                   </div>
                 </div>
 
-                <div className="flex items-start gap-4">
+                <div className="flex flex-col items-center justify md:flex-row  gap-4">
                   <div className="w-10 h-10 rounded-full bg-blue-clean/10 flex items-center justify-center text-blue-clean flex-shrink-0">
                     <MapPin className="w-5 h-5" />
                   </div>
-                  <div>
+                  <div className="flex w-[80%] flex-col justify-center items-center md:ml-4 ">
                     <h4 className="font-medium">Офис</h4>
                     <p className="text-muted-foreground">
                       Tumaris 21
@@ -267,11 +266,11 @@ export default function ContactForm() {
               <h3 className="text-xl font-semibold mb-6">Часы работы</h3>
 
               <div className="space-y-4">
-                <div className="flex items-center gap-4">
+                <div className="flex flex-col items-center  md:flex-row  gap-4">
                   <div className="w-10 h-10 rounded-full bg-blue-clean/10 flex items-center justify-center text-blue-clean flex-shrink-0">
                     <Calendar className="w-5 h-5" />
                   </div>
-                  <div>
+                  <div className="flex w-[80%] flex-col justify-center items-center md:ml-4 ">
                     <h4 className="font-medium">Будни</h4>
                     <p className="text-muted-foreground">
                       Понедельник – пятница: с 8:00 до 18:00
@@ -279,11 +278,11 @@ export default function ContactForm() {
                   </div>
                 </div>
 
-                <div className="flex items-center gap-4">
+                <div className="flex flex-col items-center  md:flex-row  gap-4">
                   <div className="w-10 h-10 rounded-full bg-blue-clean/10 flex items-center justify-center text-blue-clean flex-shrink-0">
                     <Calendar className="w-5 h-5" />
                   </div>
-                  <div>
+                  <div className="flex w-[80%] flex-col justify-center items-center md:ml-4 ">
                     <h4 className="font-medium">Выходные</h4>
                     <p className="text-muted-foreground">
                       Суббота: с 9:00 утра до 16:00 вечера
@@ -293,11 +292,11 @@ export default function ContactForm() {
                   </div>
                 </div>
 
-                <div className="flex items-center gap-4">
+                <div className="flex flex-col items-center  md:flex-row  gap-4">
                   <div className="w-10 h-10 rounded-full bg-blue-clean/10 flex items-center justify-center text-blue-clean flex-shrink-0">
                     <Clock className="w-5 h-5" />
                   </div>
-                  <div>
+                  <div className="flex w-[80%] flex-col justify-center items-center md:ml-4 ">
                     <h4 className="font-medium">Служба экстренной помощи</h4>
                     <p className="text-muted-foreground">
                       Предоставляется по запросу

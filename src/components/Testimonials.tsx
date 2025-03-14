@@ -60,7 +60,7 @@ export default function Testimonials() {
         <div className="relative">
           <div ref={containerRef} className="overflow-hidden px-4">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-              <div className="relative h-[26rem] w-full">
+              <div className="relative h-[30rem] md:h-[26rem] w-full">
                 {testimonials.map((testimonial, idx) => (
                   <div
                     key={testimonial.id}
