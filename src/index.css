@@ -116,7 +116,7 @@
   }
 
   .glass-card {
-    @apply bg-white/70 backdrop-blur-md border border-white/20 shadow-clean-card rounded-2xl transition-all duration-500;
+    @apply backdrop-blur-md border border-white/20 shadow-clean-card rounded-2xl transition-all duration-500;
   }
 
   .glass-card-hover {
