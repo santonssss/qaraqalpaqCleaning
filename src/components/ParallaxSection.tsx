@@ -47,11 +47,11 @@ export default function ParallaxSection() {
   const renderBenefits = benefits.map((benefit, index) => (
     <motion.div
       key={index}
-      className="flex items-start gap-3"
+      className="flex items-start  gap-3"
       variants={itemVariants}
     >
       <CheckCircle className="w-5 h-5 text-blue-clean mt-0.5 flex-shrink-0" />
-      <span className="dark:text-white/90">{benefit}</span>
+      <span className="dark:text-white/90 ">{benefit}</span>
     </motion.div>
   ));
 
@@ -59,7 +59,7 @@ export default function ParallaxSection() {
     <section
       ref={sectionRef}
       id="about"
-      className="py-24 relative overflow-hidden"
+      className="md:py-24 relative overflow-hidden"
     >
       <motion.div
         className="absolute inset-0  from-white to-blue-clean/5 dark:from-slate-900 dark:to-blue-clean/5 z-0"

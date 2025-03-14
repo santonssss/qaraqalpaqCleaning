@@ -29,36 +29,8 @@ export default function ProductsSection() {
   };
 
   return (
-    <section id="products" className="py-24 relative overflow-hidden">
+    <section id="products" className="md:py-24 relative overflow-hidden">
       <div className="absolute inset-0  z-0"></div>
-
-      <motion.div
-        className="absolute top-1/3 right-5 w-64 h-64 bg-blue-clean-light dark:bg-blue-clean/20 rounded-full filter blur-3xl opacity-20"
-        animate={{
-          scale: [1, 1.2, 1],
-          x: [0, 20, 0],
-        }}
-        transition={{
-          duration: 12,
-          repeat: Infinity,
-          repeatType: "reverse",
-          ease: "easeInOut",
-          delay: 0.2,
-        }}
-      />
-      <motion.div
-        className="absolute bottom-1/3 left-5 w-96 h-96 bg-mint-clean-light dark:bg-blue-clean/10 rounded-full filter blur-3xl opacity-20"
-        animate={{
-          scale: [1, 1.1, 1],
-          x: [0, -20, 0],
-        }}
-        transition={{
-          duration: 10,
-          repeat: Infinity,
-          repeatType: "reverse",
-          ease: "easeInOut",
-        }}
-      />
 
       <div className="section-container relative z-10">
         <AnimatedElement
@@ -155,28 +127,15 @@ export default function ProductsSection() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredProducts.map((product, index) => (
-            <AnimatedElement
-              key={product.id}
-              variant={
-                index % 3 === 0
-                  ? "slideUp"
-                  : index % 3 === 1
-                  ? "scale"
-                  : "fadeIn"
-              }
-              delay={index * 0.1}
-              duration={0.7}
-            >
-              <ProductCard
-                id={product.id}
-                name={product.name}
-                description={product.description}
-                price={product.price}
-                image={product.image}
-                category={product.category}
-              />
-            </AnimatedElement>
+          {filteredProducts.map((product) => (
+            <ProductCard
+              id={product.id}
+              name={product.name}
+              description={product.description}
+              price={product.price}
+              image={product.image}
+              category={product.category}
+            />
           ))}
         </div>
       </div>

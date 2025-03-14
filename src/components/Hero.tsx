@@ -68,7 +68,7 @@ export default function Hero() {
 
   return (
     <div
-      className="relative min-h-screen flex items-center overflow-hidden pt-16"
+      className=" md:py-24 relative min-h-screen flex items-center overflow-hidden pt-16"
       id="home"
     >
       <div className="absolute inset-0  dark:bg-slate-900 dark:bg-opacity-95 opacity-10 z-0"></div>
@@ -119,11 +119,11 @@ export default function Hero() {
               </p>
             </AnimatedElement>
 
-            <div className="mt-10 flex flex-col sm:flex-row gap-5">
+            <div className="mt-10 flex flex-col justify-center sm:flex-row gap-5">
               <AnimatedElement variant="slideUp" delay={0.5} duration={0.7}>
                 <a
                   href="#services"
-                  className="btn-primary group relative overflow-hidden"
+                  className="btn-primary  group relative overflow-hidden"
                 >
                   <span className="absolute inset-0 w-full h-full bg-white/20 dark:bg-white/10 transform -skew-x-12 -translate-x-full transition-transform ease-out duration-700 group-hover:translate-x-0"></span>
                   <span className="relative z-10 flex items-center">
@@ -151,7 +151,7 @@ export default function Hero() {
               variant="fadeIn"
               delay={0.8}
               duration={0.7}
-              className="absolute bottom-10 left-0 right-0 flex justify-center"
+              className="absolute bottom-0 left-0 right-0 flex justify-center"
             >
               <a
                 href="#services"
