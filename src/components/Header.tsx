@@ -3,6 +3,7 @@ import { Menu, X } from "lucide-react";
 import { Link } from "react-router-dom";
 import { cn } from "@lib/utils";
 import ThemeToggle from "./ThemeToggle";
+import { navItems } from "@data/data";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -16,14 +17,16 @@ export default function Navbar() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-  const navItems = {
-    home: "Главная",
-    services: "Услуги",
-    products: "Продукты",
-    about: "О нас",
-    testimonials: "Отзывы",
-    contact: "Контакты",
-  };
+
+  const navItemsRender = Object.entries(navItems).map(([key, value]) => (
+    <a
+      key={key}
+      href={`#${key}`}
+      className="relative text-foreground/80 hover:text-foreground dark:text-white/80 dark:hover:text-white transition-colors duration-300 font-medium after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:-bottom-1 after:left-0 after:bg-blue-clean after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left"
+    >
+      {value}
+    </a>
+  ));
   return (
     <header
       className={cn(
@@ -44,15 +47,7 @@ export default function Navbar() {
         </Link>
 
         <nav className="hidden md:flex items-center space-x-8">
-          {Object.entries(navItems).map(([key, value]) => (
-            <a
-              key={key}
-              href={`#${key}`}
-              className="relative text-foreground/80 hover:text-foreground dark:text-white/80 dark:hover:text-white transition-colors duration-300 font-medium after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:-bottom-1 after:left-0 after:bg-blue-clean after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left"
-            >
-              {value}
-            </a>
-          ))}
+          {navItemsRender}
         </nav>
 
         <div className="hidden md:flex items-center space-x-4">
