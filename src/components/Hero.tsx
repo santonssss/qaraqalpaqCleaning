@@ -114,34 +114,6 @@ export default function Hero() {
         {createCleanElements()}
       </div>
 
-      <motion.div
-        className="absolute -bottom-32  -left-32 w-96 h-96   dark:from-blue-clean/10 dark:to-mint-clean/10 rounded-full filter blur-3xl"
-        animate={{
-          rotate: 360,
-          scale: [1, 1.05, 1],
-        }}
-        transition={{
-          duration: 20,
-          repeat: Infinity,
-          repeatType: "loop",
-          ease: "linear",
-        }}
-      />
-
-      <motion.div
-        className="absolute -top-32 -right-32 w-96 h-96  from-mint-clean/20 to-blue-clean/20 dark:from-mint-clean/10 dark:to-blue-clean/10 rounded-full filter blur-3xl"
-        animate={{
-          rotate: -360,
-          scale: [1, 1.05, 1],
-        }}
-        transition={{
-          duration: 20,
-          repeat: Infinity,
-          repeatType: "loop",
-          ease: "linear",
-        }}
-      />
-
       <div
         ref={heroRef}
         className="relative z-10 w-full section-container flex flex-col items-center justify-center text-center"

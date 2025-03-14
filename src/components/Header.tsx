@@ -78,7 +78,7 @@ export default function Navbar() {
 
       {isMobileMenuOpen && (
         <div className="absolute top-full left-0 right-0 bg-white/95 backdrop-blur-md shadow-lg dark:bg-slate-900/95 dark:shadow-slate-800/20 md:hidden">
-          <div className="px-4 py-6 space-y-4">
+          <div className="px-4 py-6 space-y-4 flex flex-col">
             {Object.entries(navItems).map(([key, value]) => (
               <a
                 key={key}
