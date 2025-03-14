@@ -1,6 +1,5 @@
 import ServiceCard from "./ServiceCard";
 import AnimatedElement from "./AnimatedElement";
-import { motion } from "framer-motion";
 import { services } from "@data/data";
 
 export default function ServicesSection() {
